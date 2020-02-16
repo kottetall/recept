@@ -1,0 +1,14 @@
+{
+  "name": "recept",
+  "version": "0.0.1",
+  "description": "Familjens egna receptapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Alexander Hedling",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
