@@ -1,0 +1,49 @@
+{
+    "middag": {
+        "gravad lax": {
+            "bildlank": "https://www.recept.com/public/uploads/headrecipes/8df88dc8e3508317c009daa63a66d8c4.jpg",
+            "tid": "10 minuter",
+            "portioner": "2 - 4",
+            "ingredienser": [{
+                "ingrediens": "pasta",
+                "antal": "2-4",
+                "enhet": "portioner"
+            }, {
+                "ingrediens": "gravad/kallrökt lax",
+                "antal": "200",
+                "enhet": "g"
+            }, {
+                "ingrediens": "crème fraiche",
+                "antal": "2",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "senap",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "honung",
+                "antal": "0,5",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "pressad citron/lime",
+                "antal": "1",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "hackad dill",
+                "antal": "0,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "vitpeppar",
+                "antal": "1",
+                "enhet": "krm"
+            }],
+            "steg": [
+                "Koka pastan enligt anvisningar på paketet.",
+                "Skär laxen i små bitar.",
+                "Blanda crème fraiche, senap, honung, citronsaft, dill och peppar i en kastrull.",
+                "Låt såsen koka upp och ta direkt bort kastrullen från plattan. Rör sedan ner laxen.(Laxen ska inte koka, utan bara bli ljummen.)",
+                "Lägg upp pasta på tallrikar och häll laxsåsen över."
+            ]
+        }
+    }
+}
