@@ -7,30 +7,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f8762344d3.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/style.css">
     <title>Familjens receptapp</title>
 </head>
 
 <body>
-    <nav>
-        <ul class="weekNav">
-            <li class="day">Mån</li>
-            <li class="day active">Tis</li>
-            <li class="day">Ons</li>
-            <li class="day">Tors</li>
-            <li class="day">Fre</li>
-            <li class="day">Lör</li>
-            <li class="day">Sön</li>
-        </ul>
-    </nav>
-    <section class="week">
-        <div class="weekday">
-        </div>
+    <section class="mainApp">
+        <nav>
+            <ul class="weekNav">
+                <li class="day" id="monday">Mån</li>
+                <li class="day" id="tuesday">Tis</li>
+                <li class="day" id="wednesday">Ons</li>
+                <li class="day" id="thursday">Tors</li>
+                <li class="day" id="friday">Fre</li>
+                <li class="day" id="saturday">Lör</li>
+                <li class="day" id="sunday">Sön</li>
+            </ul>
+        </nav>
+        <article class="week">
+            <div class="weekday">
+            </div>
+        </article>
     </section>
 
+    <section class="addRecipeApp">
+        <article class="week">
+            <label for="rubrikInput">Rubrik
+                <input type="text" name="rubrikInput"></label>
 
+            <label for="tidInput">Ungefärlig tid
+                <input type="text" name="tidInput"></label>
+
+            <label for="portionerInput">Antal portioner
+                <input type="text" name="portionerInput"></label>
+
+            <label for="ingrediensInput">Ingredienser
+                <ul class="ingrediensInputLista">
+                    <li><input type="text" name="ingrediensInput" class="ingredienserInput"> <i
+                            class="fas fa-plus-circle"></i></li>
+                </ul>
+            </label>
+
+            <label for="stegInput">
+                Steg
+                <ol class="stegInputLista">
+                    <li><textarea name="stegInput" id="" cols="30" rows="2"></textarea>
+                        <i class="fas fa-plus-circle"></i></li>
+                </ol>
+            </label>
+
+
+
+        </article>
+
+    </section>
     <script src="src/funktioner.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/addRecipe.js"></script>
 </body>
 
 </html>

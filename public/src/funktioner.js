@@ -30,6 +30,16 @@ function skapaRecept(namn, bildlank, tid, portioner, ingredienser, steg) {
     rubrik.textContent = namn
     rubrik.className = "rubrik"
 
+    const miniMeny = document.createElement("div")
+    miniMeny.className = "miniMeny"
+    const diceRubrik = createDice()
+    diceRubrik.addEventListener("click", randomSingleRecipe)
+    const nyttRecept = createAdd()
+    nyttRecept.addEventListener("click", addRecipe)
+
+    miniMeny.append(diceRubrik, nyttRecept)
+    rubrik.append(miniMeny)
+
     const bild = document.createElement("img")
     bild.src = bildlank
     bild.alt = "Bild på rätt"
@@ -40,17 +50,23 @@ function skapaRecept(namn, bildlank, tid, portioner, ingredienser, steg) {
 
     const spanTid = document.createElement("span")
     spanTid.className = "tid"
-    spanTid.textContent = tid
+
+    if (tid) {
+        spanTid.textContent = tid
+    }
 
     const spanPortioner = document.createElement("span")
     spanPortioner.className = "portioner"
-    spanPortioner.textContent = `ca ${portioner} portioner`
+    if (portioner) {
+        spanPortioner.textContent = `ca ${portioner} portioner`
+    }
 
     info.append(spanTid, spanPortioner)
 
     const ingredienserHeader = document.createElement("h3")
     ingredienserHeader.setAttribute("aria-hidden", "true")
     ingredienserHeader.textContent = "Ingredienser"
+    ingredienserHeader.addEventListener("click", hideParent)
     const hideIngredienser = createCaret()
     ingredienserHeader.append(hideIngredienser)
 
@@ -94,6 +110,7 @@ function skapaRecept(namn, bildlank, tid, portioner, ingredienser, steg) {
     const stegHeader = document.createElement("h3")
     stegHeader.setAttribute("aria-hidden", "true")
     stegHeader.textContent = "Steg"
+    stegHeader.addEventListener("click", hideParent)
     const hideSteg = createCaret()
     stegHeader.append(hideSteg)
 
@@ -115,15 +132,28 @@ function skapaRecept(namn, bildlank, tid, portioner, ingredienser, steg) {
 
 function markForShopping() {
     console.log("Funktion för att lägga till varan i shoppinglista samt markera att den inte finns")
-    if (!this.classList.contains("needToBuy")) {
+
+    //TODO: snygga till
+    if (this.parentElement.classList.contains("isHome")) {
+        this.parentElement.classList.remove("isHome")
+        this.previousSibling.classList.add("fa-circle")
+        this.previousSibling.classList.remove("fa-check-circle")
+    }
+
+    if (!this.parentElement.classList.contains("needToBuy")) {
         this.parentElement.classList.add("needToBuy")
     } else {
+        console.log("triggas")
         this.parentElement.classList.remove("needToBuy")
     }
 }
 
 function markInFridge() {
     console.log("Funktion för att  markera att varan redan finns")
+    if (this.parentElement.classList.contains("needToBuy")) {
+        this.parentElement.classList.remove("needToBuy")
+    }
+
     if (!this.classList.contains("fa-check-circle")) {
         this.parentElement.classList.add("isHome")
         this.classList.remove("fa-circle")
@@ -138,15 +168,75 @@ function markInFridge() {
 function createCaret() {
     const caret = document.createElement("i")
     caret.className = "fas fa-caret-up"
-    caret.addEventListener("click", hideParent)
 
     return caret
 }
 
+function createDice() {
+    const dice = document.createElement("i")
+    dice.className = "fas fa-dice"
+
+    return dice
+}
+
+function createAdd() {
+    const addingButton = document.createElement("i")
+    addingButton.className = "fas fa-plus-circle"
+
+    return addingButton
+}
+
 function hideParent() {
-    const parentToAffect = this.parentElement
-    const elementToAffect = this.parentElement.nextSibling
+    const thisElement = this
+    const elementToAffect = this.nextSibling
     const oldState = JSON.parse(elementToAffect.getAttribute("aria-hidden"))
     elementToAffect.setAttribute("aria-hidden", !oldState)
-    parentToAffect.setAttribute("aria-hidden", !oldState)
+    thisElement.setAttribute("aria-hidden", !oldState)
+}
+
+function switchClass(element, {
+    oldClass,
+    newClass
+}) {
+
+    if (oldClass) {
+        element.classList.remove(oldClass)
+    }
+    if (newClass) {
+        element.classList.add(newClass)
+    }
+}
+
+function setCurrentDay() {
+    let todaysNumber = new Date().getDay()
+    let today = new Intl.DateTimeFormat("en", {
+        weekday: "long"
+    }).format(todaysNumber).toLowerCase()
+
+    document.getElementById(today).classList.add("active")
+}
+
+function changeActive() {
+    const days = document.querySelectorAll(".day")
+    for (let day of days) {
+        switchClass(day, {
+            oldClass: "active"
+        })
+    }
+
+    switchClass(this, {
+        newClass: "active"
+    })
+}
+
+function randomSingleRecipe() {
+    console.log("Funktionen som triggas ska ersätta receptet med ett slumpvis valt")
+}
+
+function addRecipe() {
+    console.log("Funktionen som triggas ska öppna en ny sida för att kunna lägga till nya recept")
+    clearAll()
+
+    // Tillfälligt
+    document.querySelector(".addRecipeApp").style.display = "block"
 }
