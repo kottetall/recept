@@ -8,9 +8,16 @@
     /* outline: 1px solid brown; */
 }
 
+
+
 .mainApp {
     /* FÖR DEV */
     /* display: none; */
+}
+
+.tillfalligSwitch {
+    position: absolute;
+    bottom: 0;
 }
 
 .addRecipeApp {
@@ -115,6 +122,7 @@ label li textarea {
 
 .preview {
     position: relative;
+    /* min-height: 100px; */
     width: 80%;
     display: block;
     opacity: 0.3;
@@ -131,6 +139,16 @@ label li textarea {
 .portioner {
     font-weight: bold;
     font-size: 0.8rem;
+}
+
+.weekday.removing {
+    transform: scale(0);
+    transition: transform 200ms ease-out;
+}
+
+.weekday {
+    transform: scale(1);
+    transition: transform 200ms ease-out;
 }
 
 .weekday h3 {
@@ -160,12 +178,15 @@ label li textarea {
 .ingredienser[aria-hidden=true],
 .steg[aria-hidden=true] {
     overflow: hidden;
-    animation: hide 300ms ease-in-out forwards
+    transform: scale(0);
+    max-height: 0px;
+    transition: transform 300ms ease-in-out;
 }
 
 .ingredienser[aria-hidden=false],
 .steg[aria-hidden=false] {
-    animation: unhide 300ms ease-in-out forwards
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
 }
 
 .weekday h3[aria-hidden=true] .fa-caret-up {
@@ -236,26 +257,7 @@ label li textarea {
     margin: 5px;
 }
 
-/* ANIMATIONER */
-@keyframes hide {
-    90% {
-
-        transform: scale(0);
-    }
-
-    100% {
-        max-height: 0px;
-    }
-}
-
-@keyframes unhide {
-
-    90% {
-
-        transform: scale(1);
-    }
-
-    100% {
-        max-height: 700px;
-    }
+.steg .done {
+    text-decoration: line-through;
+    font-size: 0.9em;
 }

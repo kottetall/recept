@@ -1,6 +1,7 @@
 {
     "middag": {
         "gravad lax": {
+            "rubrik": "gravad lax",
             "bildlank": "https://www.recept.com/public/uploads/headrecipes/8df88dc8e3508317c009daa63a66d8c4.jpg",
             "tid": "10 minuter",
             "portioner": "2 - 4",
@@ -43,6 +44,304 @@
                 "Blanda crème fraiche, senap, honung, citronsaft, dill och peppar i en kastrull.",
                 "Låt såsen koka upp och ta direkt bort kastrullen från plattan. Rör sedan ner laxen.(Laxen ska inte koka, utan bara bli ljummen.)",
                 "Lägg upp pasta på tallrikar och häll laxsåsen över."
+            ]
+        },
+        "Pastasallad med salami och fetaost": {
+            "rubrik": "Pastasallad med salami och fetaost",
+            "bildlank": "https://www.recepten.se/bilder/recept/87/main/l/pasta_salami_fetaost.jpg",
+            "tid": "15 minuter",
+            "portioner": "4",
+            "ingredienser": [{
+                "ingrediens": "pasta",
+                "antal": "500",
+                "enhet": "g"
+            }, {
+                "ingrediens": "salami",
+                "antal": "15-20",
+                "enhet": "skivor"
+            }, {
+                "ingrediens": "fetaost",
+                "antal": "150",
+                "enhet": "g"
+            }, {
+                "ingrediens": "soltorkade tomater",
+                "antal": "5-6",
+                "enhet": "st"
+            }, {
+                "ingrediens": "basilika",
+                "antal": "3-5",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "olivolja",
+                "antal": "1",
+                "enhet": "msk"
+            }],
+            "steg": [
+                "Koka pastan enligt beskrivning på paketet.",
+                "Skär under tiden salami i strimlor, fetaost i kuber, soltorkade tomater i småbitar och basilikabladen i mindre bitar.",
+                "När pastan kokat klart. Häll över kallt vatten så att pastan blir lite ljummen. Häll upp pastan i en bunke eller serveringsskål.",
+                "Häll olivoljan över pastan. Blanda med salami, fetaost, soltorkade tomater och basilika. Servera direkt eller förvara i kylskåp fram till servering"
+            ]
+        },
+        "Stuvade makaroner": {
+            "rubrik": "Stuvade makaroner",
+            "bildlank": "https://www.recepten.se/bilder/recept/224/main/l/stuvade_makaroner.jpg",
+            "tid": "30 minuter",
+            "portioner": "4",
+            "ingredienser": [{
+                "ingrediens": "makaroner",
+                "antal": "5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "mjölk",
+                "antal": "1",
+                "enhet": "l"
+            }, {
+                "ingrediens": "salt",
+                "antal": "0,5",
+                "enhet": "tsk"
+            }],
+            "steg": [
+                "Använd en kastrull med tjock botten eller en kastrull i teon för att minska risken att det bränner fast i botten. Koka upp mjölken och tillsätt salt och makaroner.",
+                "Detta ska nu stå och koka på svag värme i ca 25 minuter så att makaronerna blir riktigt mjuka. Se till att du rör om några gånger så att det inte bränner fast i botten.",
+                "Under tiden makaronerna kokar, stek korven och wokgrönsakerna (eller andra tillbehör). Jag steker först korven och lägger över på ett fat och steker därefter wokgrönsakerna i smör eller olja, saltar lite, sänker värmen och lägger därefter tillbaka korven ovanpå grönsakerna så att allt hålls varmt tills makaronerna är klara.",
+                "När makaronerna är riktigt mjuka och sugit upp det mesta av mjölken (man ska inte hälla bort någon mjölk) så är de klara. Smaka av med salt, peppar och muskot. Servera med korv och grönsaker"
+            ]
+        },
+        "Biff à la Lindström": {
+            "rubrik": "Biff à la Lindström",
+            "bildlank": "https://www.recepten.se/bilder/recept/347/main/l/biff_a_la_lindstroem.jpg",
+            "tid": "30 minuter",
+            "portioner": "4",
+            "ingredienser": [{
+                "ingrediens": "ströbröd",
+                "antal": "4",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "potatismjöl",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "vatten",
+                "antal": "1,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "inlagda rödbetor",
+                "antal": "1,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "rödlök",
+                "antal": "2",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "smörgåsgurka",
+                "antal": "2",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "kapris",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "salt",
+                "antal": "1",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "svartpeppar",
+                "antal": "1",
+                "enhet": "krm"
+            }, {
+                "ingrediens": "nötfärs",
+                "antal": "400",
+                "enhet": "g"
+            }, {
+                "ingrediens": "ägg",
+                "antal": "1",
+                "enhet": "st"
+            }],
+            "steg": [
+                "Häll ströbröd, potatismjöl och vatten i en bunke och rör om. Låt stå ca 10 minuter så att det sväller. Under tiden det sväller kan man passa på att hacka lök, rödbetor och smörgåsgurka i små bitar.",
+                "Rör ner salt och svartpeppar och blanda därefter ihop med köttfärsen. Blanda sist ner ägg, hackad lök, hackade rödbetor, hackad smörgåsgurka och kapris.",
+                "Forma smeten till ca 8 biffar. Hetta upp en stekpanna med smör och stek ca 3-4 minuter på varje sida på medelhög värme. Var försiktig när du vänder biffarna för de ramlar ganska lätt isär.",
+                "När biffarna är färdiga stek lök och ev. haricot verts eller sockerärtor ett par minuter.",
+                "Servera tillsammans med potatismos och tillbehör."
+            ]
+        },
+        "Panerad rödspätta": {
+            "rubrik": "Panerad rödspätta",
+            "bildlank": "https://www.recepten.se/bilder/recept/570/main/l/panerad_roedspaetta.jpg",
+            "tid": "10 minuter",
+            "portioner": "4",
+            "ingredienser": [{
+                "ingrediens": "rödspätta",
+                "antal": "600",
+                "enhet": "g"
+            }, {
+                "ingrediens": "ströbröd",
+                "antal": "1,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "smör",
+                "antal": "25-50",
+                "enhet": "g"
+            }],
+            "steg": [
+                "Tina rödspättaléerna om frysta används. Låt rinna av. Häll upp ströbröd i en djup tallrik.",
+                "Vänd skléerna i ströbrödet så att ströbrödet fastnar på båda sidor.",
+                "Hetta upp en stekpanna med smör. När smöret slutar bubbla är det dags att börja steka. Stek ca 1-2 minuter per sida på medelvärme så att sken får lite färg och blir genomstekt. Stek så många skar som får plats i taget i stekpannan, lägg sedan på en ny klick smör och upprepa tills all sk är stekt.",
+                "Servera rödspättan med kall sksås eller varm citronsås och kokt potatis. En citronskiva kan också vara gott till liksom valfria grönsaker"
+            ]
+        },
+        "Currykyckling": {
+            "rubrik": "Currykyckling",
+            "bildlank": "https://www.recepten.se/bilder/recept/12/main/l/currykyckling.jpg",
+            "tid": "20 min",
+            "portioner": "3",
+            "ingredienser": [{
+                "ingrediens": "kycklinglårfilé",
+                "antal": "600",
+                "enhet": "g"
+            }, {
+                "ingrediens": "smör",
+                "antal": "2",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "curry",
+                "antal": "2",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "salt",
+                "antal": "0,5 - 1",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "svartpeppar",
+                "antal": "1",
+                "enhet": "krm"
+            }, {
+                "ingrediens": "paprika",
+                "antal": "1",
+                "enhet": "st"
+            }, {
+                "ingrediens": "bacon",
+                "antal": "140",
+                "enhet": "g"
+            }, {
+                "ingrediens": "crème fraiche",
+                "antal": "2",
+                "enhet": "dl"
+            }],
+            "steg": [
+                "Strimla kycklingen. Hetta upp en stekpanna med smör. Förbered det du vill servera med som tar tid t.ex. kokt bulgur eller ris.",
+                "Lägg kycklingstrimlorna i stekpannan och strö över curry, salt och peppar. Stek några minuter på medelhög temperatur, rör om och fortsätt steka.",
+                "Strimla paprika och bacon. Låt steka tillsammans med kycklingen.",
+                "Rör sist ner crème fraiche och låt allt koka ca 5 min. Kycklingen och bacon ska vara genomstekt. Smaka av med curry och salt så att du får önskad smak.",
+                "Strö gärna över lite salta jordnötter vid servering. Servera med valfria tillbehör t.ex. kokt ris och kokt broccoli."
+            ]
+        },
+        "Pizza med pizzadeg på bakpulver": {
+            "rubrik": "Pizza med pizzadeg på bakpulver",
+            "bildlank": "https://www.recepten.se/bilder/recept/61/main/l/pizza.jpg",
+            "tid": "1 timme",
+            "portioner": "4",
+            "ingredienser": [{
+                "ingrediens": "vetemjöl",
+                "antal": "5,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "bakpulver",
+                "antal": "1,5",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "salt",
+                "antal": "1",
+                "enhet": "krm"
+            }, {
+                "ingrediens": "smör",
+                "antal": "75",
+                "enhet": "g"
+            }, {
+                "ingrediens": "mjölk",
+                "antal": "2",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "krossade tomater",
+                "antal": "1",
+                "enhet": "pkt"
+            }, {
+                "ingrediens": "bacon",
+                "antal": "1",
+                "enhet": "pkt"
+            }, {
+                "ingrediens": "champinjoner",
+                "antal": "200  -  400",
+                "enhet": "g"
+            }, {
+                "ingrediens": "ananas",
+                "antal": "1",
+                "enhet": "burk"
+            }, {
+                "ingrediens": "pizzakrydda",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "riven ost",
+                "antal": "200",
+                "enhet": "g"
+            }],
+            "steg": [
+                "Blanda mjöl, bakpulver, salt i en bunke.",
+                "Tillsätt smöret skuret i små bitar. Finfördela med ngrarna till en grynig massa.",
+                "Tillsätt mjölken och arbeta snabbt till en smidig deg.",
+                "Kavla ut degen så tunt som möjligt till valfri form på två plåtar (om du gör en sats deg). Vik upp kanterna så inte fyllningen rinner av.",
+                "Häll på krossade tomater eller något av alternativen och bred ut till ett jämnt lager.",
+                "Skär bacon i små bitar och fördela jämnt. Skär champinjoner i skivor och fördela dem. Skär ananasen i små bitar och fördela dem jämnt.",
+                "Strö över kryddor. Strö över riven ost.",
+                "Grädda mitt i ugnen i 225°C i 15-20 minuter tills pizzan fått fin färg."
+            ]
+        },
+        "mall": {
+            "rubrik": "",
+            "bildlank": "",
+            "tid": "",
+            "portioner": "",
+            "ingredienser": [{
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }],
+            "steg": [
+                "",
+                "",
+                "",
+                "",
+                ""
             ]
         }
     }

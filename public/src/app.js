@@ -1,12 +1,12 @@
-console.log("app.js funkar")
-
-window.onload = () => {
+"use strict"
+window.onload = async () => {
 
     const days = document.querySelectorAll(".day")
     for (const day of days) {
-        day.addEventListener("click", changeActive)
+        day.addEventListener("click", changeActiveDay)
     }
-
+    await createRecipeWeekMenu()
     setCurrentDay()
+    // showExample()
 
 }

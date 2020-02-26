@@ -1,4 +1,7 @@
-console.log("funktioner.js funkar")
+"use strict"
+
+// GLOBALS //FIXME: fixa så man slipper globala
+const middagsRecepten = []
 
 async function loading(url = "src/exempel.json") {
     let response = await fetch(url)
@@ -6,39 +9,77 @@ async function loading(url = "src/exempel.json") {
     return receptlista
 }
 
-async function show() {
+async function showExample() {
     const recepten = await loading()
     for (const recept in recepten["middag"]) {
-        const {
-            bildlank,
-            tid,
-            portioner,
-            ingredienser,
-            steg
-        } = recepten["middag"][recept]
-
-
-        skapaRecept(recept, bildlank, tid, portioner, ingredienser, steg)
+        if (recept !== "mall") {
+            skapaRecept(recepten["middag"][recept])
+        }
     }
 }
 
-show()
+function clearChildren(target) {
+    const children = document.querySelector(target).children
+    for (let i = children.length - 1; 0 <= i; i--) {
+        children[i].remove()
+    }
+}
 
-function skapaRecept(namn, bildlank, tid, portioner, ingredienser, steg) {
+function changeActiveDay() {
+    changeActive(this)
 
-    const rubrik = document.createElement("h2")
-    rubrik.textContent = namn
-    rubrik.className = "rubrik"
+    document.querySelector(".weekday").classList.add("removing")
+
+    document.querySelector(".weekday").addEventListener("transitionend", () => {
+        clearChildren(".weekday")
+
+        const index = this.dataset.index
+        skapaRecept(middagsRecepten[index])
+
+        document.querySelector(".preview").addEventListener("load", () => {
+            document.querySelector(".weekday").classList.remove("removing")
+        })
+    }, {
+        once: true
+    })
+}
+
+//FIXME: Exempel för test
+
+async function createRecipeWeekMenu() {
+    const recepten = await loading()
+    const {
+        middag
+    } = recepten
+
+    for (const namn in middag) {
+        middagsRecepten.push(middag[namn])
+    }
+}
+
+function skapaRecept(recept) {
+    const {
+        bildlank,
+        tid,
+        portioner,
+        ingredienser,
+        steg,
+        rubrik
+    } = recept
+
+    const receptRubrik = document.createElement("h2")
+    receptRubrik.textContent = rubrik
+    receptRubrik.className = "rubrik"
 
     const miniMeny = document.createElement("div")
     miniMeny.className = "miniMeny"
     const diceRubrik = createDice()
     diceRubrik.addEventListener("click", randomSingleRecipe)
     const nyttRecept = createAdd()
-    nyttRecept.addEventListener("click", addRecipe)
+    nyttRecept.addEventListener("click", switchApp)
 
     miniMeny.append(diceRubrik, nyttRecept)
-    rubrik.append(miniMeny)
+    receptRubrik.append(miniMeny)
 
     const bild = document.createElement("img")
     bild.src = bildlank
@@ -121,17 +162,29 @@ function skapaRecept(namn, bildlank, tid, portioner, ingredienser, steg) {
     for (let del of steg) {
         const li = document.createElement("li")
         li.textContent = del
+        li.addEventListener("click", doneStep)
         stegLista.append(li)
     }
 
     // TESTSTÄLLE
     let veckodag = document.querySelector(".weekday")
-    veckodag.append(rubrik, bild, info, ingredienserHeader, ingredienserLista, stegHeader, stegLista)
+    veckodag.append(receptRubrik, bild, info, ingredienserHeader, ingredienserLista, stegHeader, stegLista)
 
 }
 
+function doneStep() {
+    if (this.classList.contains("done")) {
+        switchClass(this, {
+            oldClass: "done"
+        })
+    } else {
+        switchClass(this, {
+            newClass: "done"
+        })
+    }
+}
+
 function markForShopping() {
-    console.log("Funktion för att lägga till varan i shoppinglista samt markera att den inte finns")
 
     //TODO: snygga till
     if (this.parentElement.classList.contains("isHome")) {
@@ -143,13 +196,11 @@ function markForShopping() {
     if (!this.parentElement.classList.contains("needToBuy")) {
         this.parentElement.classList.add("needToBuy")
     } else {
-        console.log("triggas")
         this.parentElement.classList.remove("needToBuy")
     }
 }
 
 function markInFridge() {
-    console.log("Funktion för att  markera att varan redan finns")
     if (this.parentElement.classList.contains("needToBuy")) {
         this.parentElement.classList.remove("needToBuy")
     }
@@ -208,15 +259,13 @@ function switchClass(element, {
 }
 
 function setCurrentDay() {
-    let todaysNumber = new Date().getDay()
-    let today = new Intl.DateTimeFormat("en", {
+    let today = new Intl.DateTimeFormat("en-GB", {
         weekday: "long"
-    }).format(todaysNumber).toLowerCase()
-
-    document.getElementById(today).classList.add("active")
+    }).format().toLowerCase()
+    document.getElementById(today).click()
 }
 
-function changeActive() {
+function changeActive(element) {
     const days = document.querySelectorAll(".day")
     for (let day of days) {
         switchClass(day, {
@@ -224,7 +273,7 @@ function changeActive() {
         })
     }
 
-    switchClass(this, {
+    switchClass(element, {
         newClass: "active"
     })
 }
@@ -233,10 +282,22 @@ function randomSingleRecipe() {
     console.log("Funktionen som triggas ska ersätta receptet med ett slumpvis valt")
 }
 
-function addRecipe() {
+function switchApp() {
     console.log("Funktionen som triggas ska öppna en ny sida för att kunna lägga till nya recept")
-    clearAll()
+    // clearAll()
 
     // Tillfälligt
-    document.querySelector(".addRecipeApp").style.display = "block"
+    const addRecipeApp = document.querySelector(".addRecipeApp")
+    const mainApp = document.querySelector(".mainApp")
+
+    const status = document.querySelector(".addRecipeApp").style.display
+
+    if (status !== "block") {
+        addRecipeApp.style.display = "block"
+        mainApp.style.display = "none"
+    } else {
+        addRecipeApp.style.display = "none"
+        mainApp.style.display = "block"
+    }
+
 }
