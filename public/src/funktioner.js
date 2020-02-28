@@ -4,6 +4,7 @@
 const middagsRecepten = []
 
 async function loading(url = "src/exempel.json") {
+    console.log(url)
     let response = await fetch(url)
     let receptlista = await response.json()
     return receptlista
@@ -47,18 +48,23 @@ function changeActiveDay() {
 //FIXME: Exempel för test
 
 async function createRecipeWeekMenu() {
-    const recepten = await loading()
+    // const recepten = await loading()
+    const recepten = await loading("src/nodeScraperExempel.json") //för test med Node Scraper
     const {
         middag
     } = recepten
 
     for (const namn in middag) {
-        middagsRecepten.push(middag[namn])
+        if (namn !== "mall") {
+            middagsRecepten.push(middag[namn])
+        }
     }
 }
 
 function skapaRecept(recept) {
     const {
+        egetRecept,
+        originalLank,
         bildlank,
         tid,
         portioner,
@@ -66,6 +72,9 @@ function skapaRecept(recept) {
         steg,
         rubrik
     } = recept
+
+    const headerContainer = document.createElement("div")
+    headerContainer.className = "headerContainer"
 
     const receptRubrik = document.createElement("h2")
     receptRubrik.textContent = rubrik
@@ -80,6 +89,25 @@ function skapaRecept(recept) {
 
     miniMeny.append(diceRubrik, nyttRecept)
     receptRubrik.append(miniMeny)
+
+    // Om det inte är ett eget recept
+    const credits = document.createElement("div")
+    if (!egetRecept) {
+
+        credits.className = "credits"
+        credits.textContent = "Ⓒ"
+        const linkToCredit = document.createElement("a")
+        linkToCredit.href = originalLank
+        //Hämtar namnet genom länken
+        const regex = /https?:\/\/www.(\w+\.\w+)/ //TODO: Behöver förbättras
+        const creditNamn = originalLank.match(regex)[1]
+
+        linkToCredit.textContent = creditNamn
+        credits.append(linkToCredit)
+        receptRubrik.append(credits)
+    }
+
+    headerContainer.append(receptRubrik, credits, miniMeny)
 
     const bild = document.createElement("img")
     bild.src = bildlank
@@ -168,7 +196,11 @@ function skapaRecept(recept) {
 
     // TESTSTÄLLE
     let veckodag = document.querySelector(".weekday")
-    veckodag.append(receptRubrik, bild, info, ingredienserHeader, ingredienserLista, stegHeader, stegLista)
+    // veckodag.append(receptRubrik, bild, info, ingredienserHeader, ingredienserLista, stegHeader, stegLista)
+
+    // TILLFÄLLIGT TEST //
+    veckodag.append(headerContainer, bild, info, ingredienserHeader, ingredienserLista, stegHeader, stegLista)
+    // TILLFÄLLIGT TEST //
 
 }
 

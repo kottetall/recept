@@ -8,21 +8,13 @@
     /* outline: 1px solid brown; */
 }
 
-
-
-.mainApp {
-    /* FÖR DEV */
-    /* display: none; */
+.addRecipeApp {
+    display: none;
 }
 
 .tillfalligSwitch {
     position: absolute;
     bottom: 0;
-}
-
-.addRecipeApp {
-    /* FÖR DEV */
-    display: none;
 }
 
 label {
@@ -97,18 +89,22 @@ label li textarea {
     width: 90vw;
 }
 
-.rubrik {
-    position: relative;
+.headerContainer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     margin: 3vh 0;
+}
+
+.rubrik {
+    grid-column: 1/3;
     text-transform: uppercase;
 }
 
 .miniMeny {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.7em;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    text-align: right;
 }
 
 .miniMeny i {
@@ -118,6 +114,11 @@ label li textarea {
 
 .miniMeny i:hover {
     cursor: pointer;
+}
+
+.credits {
+    grid-column: 1/2;
+    grid-row: 2/2;
 }
 
 .preview {

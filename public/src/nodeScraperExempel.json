@@ -1,0 +1,522 @@
+{
+    "middag": {
+        "mall": {
+            "rubrik": "",
+            "egetRecept": false,
+            "originalLank": "",
+            "bildlank": "",
+            "tid": "",
+            "portioner": "",
+            "ingredienser": [{
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }, {
+                "ingrediens": "",
+                "antal": "",
+                "enhet": ""
+            }],
+            "steg": ["", "", "", "", ""]
+        },
+        "Pressgurka": {
+            "rubrik": "Pressgurka",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/pressgurka.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/567/main/m/pressgurka.jpg",
+            "tid": "15 minuters jobb + 1 timme i kylen",
+            "portioner": "4-6",
+            "ingredienser": [{
+                "ingrediens": "vatten",
+                "antal": "1",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "strösocker",
+                "antal": "2",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "ättikssprit",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "salt",
+                "antal": "3",
+                "enhet": "krm"
+            }, {
+                "ingrediens": "gurka",
+                "antal": "1",
+                "enhet": "st"
+            }, {
+                "ingrediens": "persilja",
+                "antal": "2",
+                "enhet": "msk"
+            }],
+            "steg": ["Mät upp vatten, strösocker, ättika och salt i en lagom stor serveringsskål. Rör runt med en gaffel tills sockret lösts upp.", "Skala gurkan om du vill och skiva den sedan i tunna skivor med en osthyvel. Lägg skivorna i lagen. Rör om. (Man måste inte skala gurkan, om skalet är krispigt och gott kan man behålla det, annars brukar jag skala bort det.)", "Lägg i hackad persilja och rör om.", "Sätt på plastfolie och lägg något som väger tillräckligt för att pressa ner gurkan under vätskenivån. Jag tog en tekopp. Låt stå i press i kylskåp 1 timme (eller längre tid, dock behövs inte tyngden efter det då gurkan ändå ligger under vätskenivån). Klart att servera! (Det går bra att servera direkt efter en timme men det går också bra att servera inom 1-2 dygn.)"]
+        },
+        "Vilda kotletter": {
+            "rubrik": "Vilda kotletter",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/vilda_kotletter.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/48/main/m/vilda_kotletter.jpg",
+            "tid": "25 minuter",
+            "portioner": "4",
+            "ingredienser": [{
+                "ingrediens": "smör",
+                "antal": "",
+                "enhet": "att"
+            }, {
+                "ingrediens": "karrékotletter",
+                "antal": "4",
+                "enhet": "st"
+            }, {
+                "ingrediens": "salt",
+                "antal": ""
+            }, {
+                "ingrediens": "svartpeppar",
+                "antal": "grovmalen",
+                "enhet": ""
+            }, {
+                "ingrediens": "enbär",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "vetemjöl",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "grädde",
+                "antal": "1,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "vatten",
+                "antal": "2,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "kalvfond",
+                "antal": "2",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "vinbärsgelé",
+                "antal": "ev.",
+                "enhet": ""
+            }, {
+                "ingrediens": "bulgur",
+                "antal": "ev.",
+                "enhet": "4"
+            }],
+            "steg": ["Hetta upp en stekpanna med smör. När smöret slutat bubbla är det dags att börja steka.", "Stek kotletterna på hög värme några minuter på varje sida så att kotletterna får färg. Salta och peppra.", "Sänk värmen och stek ytterligare 4-5 minuter på varje sida på svag värme tills köttet är genomstekt.", "Krossa enbären i en mortel.", "Vispa ut mjölet i lite av grädden. 1 msk vetemjöl är lagom att vispa ut i 0.5 dl grädde. Vispa ner resten av grädden och vattnet.", "Tillsätt kalvfond och de krossade enbären. Låt koka upp under omrörning. Småkoka 1-2 minuter.", "Servera gärna med vinbärsgelé, grönsaker och t.ex. kokt bulgur."]
+        },
+        "Gravlaxpasta": {
+            "rubrik": "Gravlaxpasta",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/gravlaxpasta.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/10/main/m/gravlaxpasta.jpg",
+            "tid": "10 minuter",
+            "portioner": "2-4",
+            "ingredienser": [{
+                "ingrediens": "pasta",
+                "antal": "2-4",
+                "enhet": "portioner"
+            }, {
+                "ingrediens": "gravad lax",
+                "antal": "200",
+                "enhet": "g"
+            }, {
+                "ingrediens": "crème fraiche",
+                "antal": "2",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "senap",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "honung",
+                "antal": "0,5",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "pressad citron",
+                "antal": "1",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "dill",
+                "antal": "0,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "vitpeppar",
+                "antal": "1",
+                "enhet": "krm"
+            }],
+            "steg": ["Koka pastan enligt anvisningar på paketet.", "Skär laxen i små bitar.", "Blanda crème fraiche, senap, honung, citronsaft, dill och peppar i en kastrull.", "Låt såsen koka upp och ta direkt bort kastrullen från plattan. Rör sedan ner laxen. (Laxen ska inte koka, utan bara bli ljummen.) Lägg upp pasta på tallrikar och häll laxsåsen över."]
+        },
+        "Bananpannkakor": {
+            "rubrik": "Bananpannkakor",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/bananpannkakor.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/198/main/m/bananpannkakor.jpg",
+            "tid": "20 min",
+            "portioner": "2",
+            "ingredienser": [{
+                "ingrediens": "bananer",
+                "antal": "2-3",
+                "enhet": "st"
+            }, {
+                "ingrediens": "ägg",
+                "antal": "4",
+                "enhet": "st"
+            }, {
+                "ingrediens": "vaniljsocker",
+                "antal": "2",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "salt",
+                "antal": "0,5-1",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "smör",
+                "antal": "ca",
+                "enhet": "15"
+            }, {
+                "ingrediens": "hallon",
+                "antal": "ca",
+                "enhet": "250"
+            }],
+            "steg": ["Skala bananerna och lägg i en bunke. Mosa bananerna med en gaffel. (Tag det mindre antalet bananer, 2 st för en sats smet om de är stora.)", "Tillsätt äggen. Rör/vispa till en jämn smet med gaffeln.", "Tillsätt vaniljsocker (eller vaniljpulver) och salt. Rör så det blir blandat med gaffeln. Nu är smeten klar. (Välj den mindre mängden salt om du kommer steka i en klick normalsaltat smör och välj den större mängden salt om du kommer att steka i osaltat smör eller om du använder väldigt lite smör när du steker.)", "Hetta upp en stekpanna på medelvärme med en klick smör. När smöret slutar bubbla är det dags att börja steka.", "Häll på bananpannkakssmet så det täcker ungefär halva stekpannan. Vinkla stekpannan lite så att smeten rinner ut och blir jämntjock utan att för den skull bli alltför tunn. (Gör man bananpannkakorna alltför stora och tunna går de lättare sönder när man vänder, gräddningstiden blir också kortare om de är tunnare, man får prova sig fram.)", "Stek ca 1-2 minuter på medelvärme och vänd sedan och stek ca 30 sek - 1 minut på andra sidan (precis som man steker vanliga pannkakor). Första bananpannkakan tar oftast längre tid. (Exakt vilken effekt på spisen och hur lång tid det tar får man prova sig fram. Lyft med en stekspade och kolla hur det ser ut under. Man kan även se att pannkakssmeten stelnar ovanpå och i kanten att den börjar få gyllene färg, då brukar de vara klara att vända. Om bananpannkakan blir bränd innan den är genomstekt så sänk effekten. Jag steker på 5 av 9.)", "Servera bananpannkakorna med hallon eller andra bär."]
+        },
+        "Tunnbrödsrulle med lax": {
+            "rubrik": "Tunnbrödsrulle med lax",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/tunnbroedsrulle_lax.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/98/main/m/tunnbroedsrulle_lax.jpg",
+            "tid": "5 minuter",
+            "portioner": "2",
+            "ingredienser": [{
+                "ingrediens": "tunnbröd",
+                "antal": "2",
+                "enhet": "st"
+            }, {
+                "ingrediens": "färskost",
+                "antal": "ca",
+                "enhet": "50"
+            }, {
+                "ingrediens": "gravad lax",
+                "antal": "100",
+                "enhet": "g"
+            }, {
+                "ingrediens": "sallad",
+                "antal": "ca",
+                "enhet": "50"
+            }, {
+                "ingrediens": "gurka",
+                "antal": "ca",
+                "enhet": "15"
+            }, {
+                "ingrediens": "körsbärstomater",
+                "antal": "ev.",
+                "enhet": "ca"
+            }],
+            "steg": ["Bred på färskost på tunnbröden.", "Lägg på skivor av gravad lax eller kallrökt lax.", "Skölj salladen, dela ev. i mindre bitar och lägg den ovanpå. Skiva gurkan och lägg på gurkskivorna.", "Rulla ihop till en tunnbrödsrulle med skarven nedåt. Servera ev. med körsbärstomater."]
+        },
+        "Blåbärskaka": {
+            "rubrik": "Blåbärskaka",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/blaabaerskaka.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/620/main/m/blaabaerskaka.jpg",
+            "tid": "10 minuters jobb + 30-35 minuter i ugnen",
+            "portioner": "ca 10 bitar",
+            "ingredienser": [{
+                "ingrediens": "smör",
+                "antal": "100",
+                "enhet": "g"
+            }, {
+                "ingrediens": "ägg",
+                "antal": "3",
+                "enhet": "st"
+            }, {
+                "ingrediens": "strösocker",
+                "antal": "2",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "vaniljsocker",
+                "antal": "2",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "salt",
+                "antal": "0,5",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "vetemjöl",
+                "antal": "3",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "blåbär",
+                "antal": "ca",
+                "enhet": "200"
+            }],
+            "steg": ["Smält smöret. När drygt hälften av smöret smält, tag bort kastrullen från värmen och rör om tills resten av smöret smält. Då slipper smöret bli onödigt varmt så att det inte blir äggröra när äggen tillsätts i nästa steg.", "Smörj en rund form med löstagbar kant, ca 22 cm i diameter. Beströ den med ströbröd eller kokosflingor.", "Tillsätt ägg, strösocker, vaniljsocker, salt och vetemjöl. Rör till en jämn smet.", "Häll smeten i formen. Strö över blåbären.", "Grädda mitt i ugnen i 175°C i ca 30-35 minuter. Låt svalna. Vid servering: Pudra gärna över florsocker och servera med vispad grädde, glass eller vaniljsås.", "Vid servering: Pudra gärna över florsocker och servera med vispad grädde, glass eller vaniljsås."]
+        },
+        "Skagenröra": {
+            "rubrik": "Skagenröra",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/skagenroera.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/552/main/m/skagenroera.jpg",
+            "tid": "30 minuter (varav 20 min för att skala räkorna)",
+            "portioner": "4-6",
+            "ingredienser": [{
+                "ingrediens": "räkor",
+                "antal": "300",
+                "enhet": "g"
+            }, {
+                "ingrediens": "crème fraiche",
+                "antal": "2",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "majonnäs",
+                "antal": "1",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "pressad lime",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "salt",
+                "antal": "0,75",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "vitpeppar",
+                "antal": "0,5",
+                "enhet": "krm"
+            }, {
+                "ingrediens": "dill",
+                "antal": "1",
+                "enhet": "knippe"
+            }],
+            "steg": ["Grovhacka räkorna. Spara några till garnering.", "Mät upp crème fraiche, majonnäs, pressad lime, salt och vitpeppar. Blanda och smaka av.", "Hacka dillen och blanda ner den och de grovhackade räkorna. (Tänk på att både dillen och räkorna bör vara så lite fuktiga som möjligt annars blir skagenröran väldigt rinnig.)", "Garnera med de hela räkorna och låt stå i kylen fram till servering. Smaken blir godare om den får stå i kylskåp minst en timme före servering."]
+        },
+        "Ananastårta": {
+            "rubrik": "Ananastårta",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/tahititaarta.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/153/main/m/tahititaarta.jpg",
+            "tid": "2 ½ timme varav 30 min i ugnen och 1 timme för att kakan ska \"safta\" sig",
+            "portioner": "8-10 bitar",
+            "ingredienser": [{
+                "ingrediens": "smör",
+                "antal": "100",
+                "enhet": "g"
+            }, {
+                "ingrediens": "kokosflingor",
+                "antal": "",
+                "enhet": "(till"
+            }, {
+                "ingrediens": "ägg",
+                "antal": "2",
+                "enhet": "st"
+            }, {
+                "ingrediens": "strösocker",
+                "antal": "1,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "bakpulver",
+                "antal": "0,5",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "kokosflingor",
+                "antal": "4",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "vetemjöl",
+                "antal": "0,5",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "vispgrädde",
+                "antal": "3",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "ananas",
+                "antal": "1",
+                "enhet": "burk"
+            }, {
+                "ingrediens": "ananas",
+                "antal": "1",
+                "enhet": "burk"
+            }],
+            "steg": ["Sätt ugnen på 175°C. Smält smöret och låt det svalna.", "Smörj en rund form, ca 24 cm i diameter, och beströ den med kokosflingor.", "Vispa ägg och socker till en ljus pösig smet med elvisp.", "Vispa ner bakpulver. Kör med elvisp 5 sekunder.", "Vispa därefter ner kokosflingor och vetemjöl. Kör med elvisp så det blir blandat (ca 20 sekunder).", "Tillsätt det smälta smöret Kör med elvisp tills det är blandat (ca 10 sekunder).", "Häll smeten i formen och bred försiktigt ut den.", "Grädda i nedersta delen av ugnen i 175°C i ca 30 minuter tills kakan är klar och har släppt kanten.", "Låt kakan stå kvar några minuter i formen, stjälp sedan upp den direkt på serveringsfatet.", "Nagga kakan med en provsticka. Skeda ananasspad (från burken med ananasringar) över kakan. Låt kakan stå och safta till sig och svalna en timme (eller mer) i rumstemperatur.", "Vispa grädden tjock. Bred ut grädden över tårtan.", "Låt den krossade ananasen rinna av. Lägg den sedan i mitten.", "Skär ananasskivorna i mindre bitar. Lägg dem med breda sidan utåt på kakans ytterkant. Tårtan är nu klar att servera men bli ännu godare om du låter den stå och safta till sig minst en timme i kylskåp."]
+        },
+        "Stekta kolabananer": {
+            "rubrik": "Stekta kolabananer",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/stekta_kolabananer.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/256/main/m/stekta_kolabananer.jpg",
+            "tid": "10 minuter",
+            "portioner": "2",
+            "ingredienser": [{
+                "ingrediens": "bananer",
+                "antal": "2",
+                "enhet": "st"
+            }, {
+                "ingrediens": "smör",
+                "antal": "2",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "farinsocker",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "ljus sirap",
+                "antal": "1",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "hasselnötkärnor",
+                "antal": "ev.",
+                "enhet": "3-4"
+            }, {
+                "ingrediens": "yoghurt",
+                "antal": "1",
+                "enhet": "dl"
+            }],
+            "steg": ["Hetta upp en stekpanna med smör. Skiva bananerna.", "När smöret bubblat klart, lägg på bananskivorna och häll över sirapen och farinsocker. Låt steka ett par minuter, så det doftar banan, men inte längre tid än så för då kan bananen bli mosig.", "Fördela bananerna och kolasåsen i portionsglas. Försök att få med all sås ur stekpannan.", "Strö över hackade nötter eller något av alternativen och toppa sedan med yoghurt. Servera direkt!"]
+        },
+        "Fiskgratäng": {
+            "rubrik": "Fiskgratäng",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/fiskgratang.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/633/main/m/fiskgratang.jpg",
+            "tid": "ca 30 minuter",
+            "portioner": "5",
+            "ingredienser": [{
+                "ingrediens": "torskfilé",
+                "antal": "800",
+                "enhet": "g"
+            }, {
+                "ingrediens": "salt",
+                "antal": "1",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "vitpeppar",
+                "antal": "2",
+                "enhet": "krm"
+            }, {
+                "ingrediens": "vetemjöl",
+                "antal": "3",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "vispgrädde",
+                "antal": "3",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "mjölk",
+                "antal": "1",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "fiskfond",
+                "antal": "2",
+                "enhet": "msk"
+            }, {
+                "ingrediens": "dill",
+                "antal": "ca",
+                "enhet": "0,75"
+            }, {
+                "ingrediens": "räkor",
+                "antal": "ca",
+                "enhet": "200-300"
+            }],
+            "steg": ["Tina fisken och skär den i ca 2 cm bitar. Lägg fiskbitarna i en smord ugnssäker form. Salta och peppra.", "Sätt in ugnsformen i mitten av ugnen i 200°C i 15 minuter. Sätt in en plåt ovanför eller täck med aluminiumfolie eller bakplåtspapper.", "Mät upp vetemjölet i en kastrull. Tillsätt drygt hälften av grädden och vispa till en jämn tjock smet. Späd med resten av grädden, lite i taget och vispa till en jämn smet. Vispa till sist ner mjölken.", "Låt koka upp under omrörning. Sänk värmen och låt puttra ca 3 minuter. Det ska vara en tjock sås.", "Tillsätt fiskfond, dill och räkor. Blanda och låt såsen bli varm igen. Smaka av med eventuellt mer fond, salt och peppar.", "Häll såsen över fisken och ställ in i mitten av ugnen i 250°C i ca 10 minuter tills den fått lite färg. Servera gärna med potatismos och sallad."]
+        },
+        "Rabarberkaka": {
+            "rubrik": "Rabarberkaka",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/rabarberkaka.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/172/main/m/rabarberkaka.jpg",
+            "tid": "55 min varav 40 min i ugnen",
+            "portioner": "1 kaka, ca 10-12 bitar",
+            "ingredienser": [{
+                "ingrediens": "rabarber",
+                "antal": "2-3",
+                "enhet": "stjälkar"
+            }, {
+                "ingrediens": "kardemumma",
+                "antal": "1",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "strösocker",
+                "antal": "2",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "smör",
+                "antal": "100",
+                "enhet": "g"
+            }, {
+                "ingrediens": "strösocker",
+                "antal": "2",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "ägg",
+                "antal": "1",
+                "enhet": "st"
+            }, {
+                "ingrediens": "bakpulver",
+                "antal": "2",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "vaniljsocker",
+                "antal": "2",
+                "enhet": "tsk"
+            }, {
+                "ingrediens": "vetemjöl",
+                "antal": "4",
+                "enhet": "dl"
+            }, {
+                "ingrediens": "mjölk",
+                "antal": "1,5",
+                "enhet": "dl"
+            }],
+            "steg": ["Mät upp smöret i en bunke. Låt stå framme i rumstemperatur så det mjuknar.", "Smörj och bröa en form med löstagbar kant ca 24 cm i diameter. (Ett tips är att använda slickepott för att enkelt få ut smöret, låt även smöret ligga framme en stund så det blir mjukt så går det snabbt och lätt.)", "Skala och skär rabarber i skivor ca 0,5-1 cm breda.", "Blanda kardemumma och strösocker. Lägg i rabarberskivorna och rör om så att det sugs upp av rabarbern.", "Tillsätt strösocker till smöret och arbeta ihop till en jämn smet. Använd gärna elvisp med vispar som du kan använda genom hela receptet.", "Tillsätt ägg, bakpulver och vaniljsocker. Rör ihop till en jämn smet (ca 10 sekunder med elvisp).", "Tillsätt vetemjöl och mjölk och blanda snabbt ihop till en jämn smet (ca 10 sekunder med elvisp). (Tänk på att inte blanda eller köra längre tid med elvispen än att det är blandat.) (Tänk på när du mäter upp vetemjölet att hälla upp det i litermått eller väga det. Gräv inte med decilitermått i mjölpåsen eftersom mjölet då packas och man tar för mycket vilket leder till en kompakt och torr kaka.)", "Häll i rabarberbitarna och blanda till en jämn smet (använd ej elvisp).", "Häll smeten i formen och bred ut den. Tryck gärna ner rabarbern ifall den sticker upp ur smeten, så riskerar den inte att bli bränd i ugnen.", "Grädda i nedre delen av ugnen i 175°C i ca 35-40 minuter tills kakan fått fin färg och man ser att den släpper kanten.", "Låt svalna. Servera som den är eller gärna med vaniljsås, vaniljglass eller vispad grädde."]
+        },
+        "Citronlax": {
+            "rubrik": "Citronlax",
+            "egetRecept": false,
+            "originalLank": "https://www.recepten.se/recept/citronlax.html",
+            "bildlank": "https://www.recepten.se/bilder/recept/480/main/m/citronlax.jpg",
+            "tid": "30 min varav 25 min i ugnen",
+            "portioner": "4-12  beroende på mängd lax",
+            "ingredienser": [{
+                "ingrediens": "laxfilé",
+                "antal": "ca",
+                "enhet": "0,5-1,5"
+            }, {
+                "ingrediens": "citronpeppar",
+                "antal": ""
+            }, {
+                "ingrediens": "salt",
+                "antal": ""
+            }, {
+                "ingrediens": "kall citronsås",
+                "antal": ""
+            }],
+            "steg": ["Ta fram en ugnsform som laxen får plats i. Olja gärna botten så blir den lättare att diska. Lägg laxen i ugnsformen. Salta och peppra på laxen. Det ska vara ganska mycket citronpeppar.", "Stek mitt i ugnen i 175°C i ca 25 minuter så att laxen blir genomstekt.", "Servera den färdiga laxen med t.ex. kall citronsås, sallad eller kokta grönsaker, ugnsstekt potatis eller kokt bulgur eller quinoa."]
+        }
+    }
+}
