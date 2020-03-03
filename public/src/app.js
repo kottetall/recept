@@ -25,7 +25,7 @@ window.onload = async () => {
             document.querySelector(stanga).style.display = "none"
 
             document.querySelector(".addRecipeApp header").dataset.childElementsOpen = true
-            document.querySelector(".addRecipeApp input[type=submit]").style.display = "block"
+            // document.querySelector(".addRecipeApp input[type=submit]").style.display = "block"
         })
     })
 
@@ -38,9 +38,27 @@ window.onload = async () => {
         element.addEventListener("click", moveLabel)
     })
 
+    document.querySelector(".medUrlContainer").addEventListener("submit", sendUrl)
 }
 
-function moveLabel() {
-    console.log(this)
-    this.classList.add("hasContent")
+
+async function sendUrl(e) {
+    e.preventDefault()
+    console.log("funkar")
+    const url = document.getElementById("urlInput").value
+    const options = {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "urlInput": url
+        })
+    }
+
+    const response = await fetch("/addUrl", options)
+    const message = await response.json()
+
+    console.log(message)
+
 }

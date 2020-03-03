@@ -49,14 +49,15 @@
             </div>
         </header>
 
-        <div class="medUrlContainer">
+        <form class="medUrlContainer">
             <div class="inputLabelContainer">
                 <label for="urlInput">URL</label>
                 <input type="text" name="urlInput" id="urlInput">
             </div>
-        </div>
+            <input type="submit" value="Lägg till" id="addUrl">
+        </form>
 
-        <div class="sjalvContainer">
+        <form class="sjalvContainer" method="POST" action="/addOwn">
             <div class="inputLabelContainer">
                 <label for="namnInput">Namn på maträtten</label>
                 <input type="text" name="namnInput" id="namnInput">
@@ -91,10 +92,8 @@
                     <i class="fas fa-plus-circle"></i>
                 </div>
             </div>
-
-        </div>
-
-        <input type="submit" value="Lägg till">
+            <input type="submit" value="Lägg till" id="addOwn">
+        </form>
 
 
         </article>

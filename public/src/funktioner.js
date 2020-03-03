@@ -347,3 +347,7 @@ function copyStegElement() {
     newChildNodes[1].addEventListener("click", copyStegElement)
     elementToAppendTo.append(newNode)
 }
+
+function moveLabel() {
+    this.classList.add("hasContent")
+}

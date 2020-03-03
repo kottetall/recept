@@ -18,11 +18,11 @@
 
 /* FÖR DEV */
 .mainApp {
-    /* display: none; */
+    display: none;
 }
 
 .addRecipeApp {
-    display: none;
+    /* display: none; */
 }
 
 .tillfalligSwitch {
@@ -415,10 +415,9 @@ header[data-child-elements-open=true] .buttonsLaggaTill input {
 }
 
 input[type=submit] {
-    display: none;
     width: 100%;
     height: 50px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     background: var(--main-action-bg);
     color: var(--main-action-color);
 }

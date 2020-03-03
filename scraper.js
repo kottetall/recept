@@ -1,5 +1,5 @@
 "use strict"
-console.clear() // för användning med Nodemon
+// console.clear() // för användning med Nodemon
 
 const puppeteer = require("puppeteer")
 
@@ -80,7 +80,7 @@ async function hamtaData(adress, selectorInnehall, screenshot = false) {
     return innehall
 }
 
-function laggTillLokalJson(adress) {
+const laggTillLokalJson = (adress) => {
     const selectorsReceptenDotSe = {
         rubrikSelector: "#content>article>h1",
         bildlankSelector: "#mainImageContainer>img",
@@ -105,17 +105,4 @@ function laggTillLokalJson(adress) {
     })
 }
 
-// const exempel = "https://www.recepten.se/recept/citronlax.html"
-// const exempel = "https://www.recepten.se/recept/rabarberkaka.html"
-// const exempel = "https://www.recepten.se/recept/fiskgratang.html"
-// const exempel = "https://www.recepten.se/recept/stekta_kolabananer.html"
-// const exempel = "https://www.recepten.se/recept/tahititaarta.html"
-// const exempel = "https://www.recepten.se/recept/skagenroera.html"
-// const exempel = "https://www.recepten.se/recept/blaabaerskaka.html"
-// const exempel = "https://www.recepten.se/recept/tunnbroedsrulle_lax.html"
-// const exempel = "https://www.recepten.se/recept/bananpannkakor.html"
-// const exempel = "https://www.recepten.se/recept/gravlaxpasta.html"
-// const exempel = "https://www.recepten.se/recept/vilda_kotletter.html"
-// const exempel = "https://www.recepten.se/recept/pressgurka.html"
-
-// laggTillLokalJson(exempel)
+exports.laggTillLokalJson = laggTillLokalJson
