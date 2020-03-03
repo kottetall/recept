@@ -333,3 +333,17 @@ function switchApp() {
     }
 
 }
+
+function copyStegElement() {
+    const newNode = document.querySelector(".stegIndividuellContainer").cloneNode({
+        deep: true
+    })
+
+    const elementToAppendTo = document.querySelector(".stegMainContainer")
+    elementToAppendTo.dataset.steg++
+    newNode.dataset.steg = elementToAppendTo.dataset.steg
+    const newChildNodes = newNode.children
+    newChildNodes[0].textContent = ""
+    newChildNodes[1].addEventListener("click", copyStegElement)
+    elementToAppendTo.append(newNode)
+}

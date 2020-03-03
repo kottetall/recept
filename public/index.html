@@ -38,33 +38,64 @@
     </section>
 
     <section class="addRecipeApp">
-        <article class="week">
-            <label for="rubrikInput">Rubrik
-                <input type="text" name="rubrikInput"></label>
 
-            <label for="tidInput">Ungefärlig tid
-                <input type="text" name="tidInput"></label>
+        <i class="fas fa-utensils toRecipes"></i>
 
-            <label for="portionerInput">Antal portioner
-                <input type="text" name="portionerInput"></label>
+        <header data-child-elements-open="false">
+            <span class="rubrikLaggaTill">Hur vill du lägga till receptet?</span>
+            <div class="buttonsLaggaTill">
+                <input type="button" class="laggaTillUrl" value="Med länk" data-malklass="medUrlContainer">
+                <input type="button" class="laggaTillSjalv" value="Skriva in själv" data-malklass="sjalvContainer">
+            </div>
+        </header>
 
-            <label for="ingrediensInput">Ingredienser
-                <ul class="ingrediensInputLista">
-                    <li><input type="text" name="ingrediensInput" class="ingredienserInput"> <i
-                            class="fas fa-plus-circle"></i></li>
-                </ul>
-            </label>
+        <div class="medUrlContainer">
+            <div class="inputLabelContainer">
+                <label for="urlInput">URL</label>
+                <input type="text" name="urlInput" id="urlInput">
+            </div>
+        </div>
 
-            <label for="stegInput">
-                Steg
-                <ol class="stegInputLista">
-                    <li><textarea name="stegInput" id="" cols="30" rows="2"></textarea>
-                        <i class="fas fa-plus-circle"></i></li>
-                </ol>
-            </label>
+        <div class="sjalvContainer">
+            <div class="inputLabelContainer">
+                <label for="namnInput">Namn på maträtten</label>
+                <input type="text" name="namnInput" id="namnInput">
+            </div>
+            <div class="tidOchPortionerContainer">
+                <div class="inputLabelContainer">
+                    <label for="portionerInput">Antal portioner</label>
+                    <input type="text" name="portionerInput" id="portionerInput">
+                </div>
 
+                <div class="inputLabelContainer">
+                    <label for="tidInput">Tid att laga</label>
+                    <input type="text" name="tidInput" id="tidInput">
+                </div>
+            </div>
+            <div class="ingredienserContainer">
 
-            <i class="fas fa-plus-circle fa-4x tillfalligSwitch" onclick="switchApp()"></i>
+                <div class="inputLabelContainer ingrediensNamnContainer">
+                    <label for="ingrediensNamnInput">Namn på ingrediens</label>
+                    <input type="text" name="ingrediensNamnInput" class="ingrediensInput">
+                </div>
+                <div class="inputLabelContainer">
+                    <label for="ingrediensMangdInput">Mängd</label>
+                    <input type="text" name="ingrediensMangdInput" class="ingrediensInput">
+                </div>
+            </div>
+
+            <div class="stegMainContainer" data-steg=1>
+                <h2>Steg</h2>
+                <div class="stegIndividuellContainer" data-steg=1>
+                    <p class="stegInput" contenteditable="true"></p>
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <input type="submit" value="Lägg till">
+
 
         </article>
 
