@@ -18,11 +18,16 @@
 
 /* FÖR DEV */
 .mainApp {
-    display: none;
+    /* display: none; */
 }
 
 .addRecipeApp {
-    /* display: none; */
+    display: none;
+}
+
+
+h2 {
+    margin: 20px 0;
 }
 
 .tillfalligSwitch {
@@ -241,6 +246,10 @@
 
 /* "LÄGGA TILL RECEPT"-DEL */
 
+.fa-plus-circle:hover {
+    cursor: pointer;
+}
+
 .toRecipes {
     --button-size: 60px;
     font-size: calc(var(--button-size) / 1.5);
@@ -344,12 +353,15 @@ header[data-child-elements-open=true] .buttonsLaggaTill input {
     width: 100%;
     height: 100%;
     padding-left: 20px;
-    font-size: 1.1em;
 }
 
 .inputLabelContainer:focus-within input {
     border: 1px solid #000;
     transition: border 300ms ease;
+}
+
+#namnInput {
+    font-size: 1.1em;
 }
 
 .tidOchPortionerContainer {
@@ -360,8 +372,17 @@ header[data-child-elements-open=true] .buttonsLaggaTill input {
 
 
 .ingredienserContainer {
+    list-style: none;
+}
+
+.ingrediensItem {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 65% 25% 10%;
+    align-items: center;
+}
+
+.ingrediensItem i {
+    margin-left: 10px;
 }
 
 .ingredienserContainer .inputLabelContainer {
@@ -420,4 +441,28 @@ input[type=submit] {
     margin: 20px 0;
     background: var(--main-action-bg);
     color: var(--main-action-color);
+}
+
+.loadingAnimation {
+    animation: pulsing 1s linear infinite;
+
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(1.05);
+    }
+
+    66% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
 }

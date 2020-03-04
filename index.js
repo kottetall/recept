@@ -8,11 +8,9 @@ app.use(express.static("public"))
 app.use(express.json())
 
 app.post("/addUrl", async (request, response) => {
-
-
     console.log("\tMeddelande mottaget")
 
-    console.log("Gör snabbkontroll av adressen")
+    console.log("* Gör snabbkontroll av adressen")
 
     const nonValidatedAdress = await request.body.urlInput
     console.log(nonValidatedAdress)
@@ -27,18 +25,47 @@ app.post("/addUrl", async (request, response) => {
         return
     }
 
-
     console.log(`\tAdressen "${url}" är godkänd`)
 
     const {
         laggTillLokalJson
     } = require("./scraper.js")
 
-    console.log("Hämtar adressen")
+    console.log("* Hämtar adressen")
 
     // laggTillLokalJson(url) //Tas bort vid tester
 
     console.log("hämtning lyckad")
+
+    response.send({
+        "message": "Database has been updated"
+    })
+})
+
+app.post("/addOwn", async (request, response) => {
+
+    console.log("\tMeddelande mottaget")
+
+    const recipe = await request.body.recipe
+
+    // FIXME: sanitizefunktion(om den inte läggs till som middleware)
+
+    if (!recipe) {
+        console.log("\tReceptobjektet är tomt")
+        response.send({
+            "message": "Empty object"
+        })
+        return
+    }
+
+
+    // FIXME: importera funktion som konverterar receptet
+
+    console.log("\t* Importerar receptet till databasen")
+
+    // FIXME:importfunktionen
+
+    console.log("Importen lyckades")
 
     response.send({
         "message": "Database has been updated"

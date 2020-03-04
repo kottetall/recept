@@ -91,6 +91,8 @@ const laggTillLokalJson = (adress) => {
         stegSelectorReserv: "#content>article>div.instructions li.instruction>div:nth-child(1)"
     }
 
+
+    // Används vid DEV
     const fs = require("fs")
     const exempelJson = "public/src/nodeScraperExempel.json"
     let rawData = fs.readFileSync(exempelJson)

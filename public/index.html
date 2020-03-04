@@ -57,7 +57,7 @@
             <input type="submit" value="Lägg till" id="addUrl">
         </form>
 
-        <form class="sjalvContainer" method="POST" action="/addOwn">
+        <form class="sjalvContainer">
             <div class="inputLabelContainer">
                 <label for="namnInput">Namn på maträtten</label>
                 <input type="text" name="namnInput" id="namnInput">
@@ -73,17 +73,20 @@
                     <input type="text" name="tidInput" id="tidInput">
                 </div>
             </div>
-            <div class="ingredienserContainer">
-
-                <div class="inputLabelContainer ingrediensNamnContainer">
-                    <label for="ingrediensNamnInput">Namn på ingrediens</label>
-                    <input type="text" name="ingrediensNamnInput" class="ingrediensInput">
-                </div>
-                <div class="inputLabelContainer">
-                    <label for="ingrediensMangdInput">Mängd</label>
-                    <input type="text" name="ingrediensMangdInput" class="ingrediensInput">
-                </div>
-            </div>
+            <h2>Ingredienser</h2>
+            <ul class="ingredienserContainer">
+                <li class="ingrediensItem">
+                    <div class="inputLabelContainer ingrediensNamnContainer">
+                        <label for="ingrediensNamnInput">Ingrediens</label>
+                        <input type="text" name="ingrediensNamnInput" class="ingrediensInput">
+                    </div>
+                    <div class="inputLabelContainer">
+                        <label for="ingrediensMangdInput">Mängd</label>
+                        <input type="text" name="ingrediensMangdInput" class="ingrediensInput">
+                    </div>
+                    <i class="fas fa-plus-circle"></i>
+                </li>
+            </ul>
 
             <div class="stegMainContainer" data-steg=1>
                 <h2>Steg</h2>

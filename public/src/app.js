@@ -9,7 +9,6 @@ window.onload = async () => {
     }
     await createRecipeWeekMenu()
     setCurrentDay()
-    // showExample()
 
     // LÄGG TILL RECEPT
 
@@ -25,11 +24,11 @@ window.onload = async () => {
             document.querySelector(stanga).style.display = "none"
 
             document.querySelector(".addRecipeApp header").dataset.childElementsOpen = true
-            // document.querySelector(".addRecipeApp input[type=submit]").style.display = "block"
         })
     })
 
-    document.querySelector(".fa-plus-circle").addEventListener("click", copyStegElement)
+    document.querySelector(".stegIndividuellContainer .fa-plus-circle").addEventListener("click", copyStegElement)
+    document.querySelector(".ingrediensItem .fa-plus-circle").addEventListener("click", copyIngrediensElement)
     document.querySelector(".toRecipes").addEventListener("click", switchApp)
 
 
@@ -39,26 +38,15 @@ window.onload = async () => {
     })
 
     document.querySelector(".medUrlContainer").addEventListener("submit", sendUrl)
+    document.querySelector(".sjalvContainer").addEventListener("submit", sendOwn)
+    // document.querySelector(".sjalvContainer").addEventListener("submit", talkingToServer)
+
 }
 
-
-async function sendUrl(e) {
-    e.preventDefault()
-    console.log("funkar")
-    const url = document.getElementById("urlInput").value
-    const options = {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "urlInput": url
-        })
-    }
-
-    const response = await fetch("/addUrl", options)
-    const message = await response.json()
-
-    console.log(message)
-
+function talkingToServer() {
+    // FIXME: gör så den funkar på båda knapparna
+    const button = document.querySelector("#addOwn")
+    button.setAttribute("disabled", true)
+    button.value = "Laddar..."
+    button.classList.add("loadingAnimation")
 }

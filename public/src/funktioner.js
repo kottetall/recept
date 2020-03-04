@@ -348,6 +348,106 @@ function copyStegElement() {
     elementToAppendTo.append(newNode)
 }
 
+function copyIngrediensElement() {
+    const newNode = document.querySelector(".ingrediensItem").cloneNode({
+        deep: true
+    })
+
+    const elementToAppendTo = document.querySelector(".ingredienserContainer")
+    const newChildNodes = newNode.children
+
+    for (let i = 0; i < 2; i++) {
+        newChildNodes[i].children[1].value = ""
+        newChildNodes[i].children[0].style.display = "none"
+        newChildNodes[i].classList.remove("hasContent")
+    }
+
+    newChildNodes[2].addEventListener("click", copyIngrediensElement)
+    elementToAppendTo.append(newNode)
+}
+
 function moveLabel() {
     this.classList.add("hasContent")
+}
+
+
+
+async function sendUrl(e) {
+    e.preventDefault()
+    console.log("funkar")
+    const url = document.getElementById("urlInput").value
+    const options = {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "userId": "Kommer sen",
+            "urlInput": url
+        })
+    }
+
+    const response = await fetch("/addUrl", options)
+    const message = await response.json()
+
+    console.log(message)
+}
+
+async function sendOwn(e) {
+    e.preventDefault()
+    console.log("funkar")
+    talkingToServer()
+
+    const recipe = getOwnRecipe()
+    console.log(recipe)
+
+
+    const options = {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "userId": "Kommer sen",
+            "recipe": recipe
+        })
+    }
+
+    const response = await fetch("/addOwn", options)
+    const message = await response.json()
+
+    // // FIXME: snabbtest
+    const button = document.querySelector("#addOwn")
+    button.setAttribute("disabled", true)
+    button.value = "Färdigt!"
+    button.classList.remove("loadingAnimation")
+
+    console.log(message)
+}
+
+function getOwnRecipe() {
+    const recipe = {}
+
+    recipe.rubrik = document.getElementById("namnInput").value
+    recipe.portioner = document.getElementById("portionerInput").value
+    recipe.tid = document.getElementById("tidInput").value
+    recipe.ingredienser = []
+    recipe.steg = []
+
+    const ingredienserElements = document.querySelectorAll(".ingrediensItem")
+    for (const ingrediensElement of ingredienserElements) {
+        const delar = ingrediensElement.children
+        const total = {}
+        total.ingrediens = delar[0].children[1].value
+        total.antal = "kommer sen" //FIXME:
+        total.enhet = "kommer sen" //FIXME:
+        recipe.ingredienser.push(total)
+    }
+
+    const allaSteg = document.querySelectorAll(".stegInput")
+    for (const steg of allaSteg) {
+        recipe.steg.push(steg.textContent)
+    }
+
+    return recipe
 }
