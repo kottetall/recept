@@ -35,11 +35,10 @@
 
             </div>
         </article>
+
     </section>
 
     <section class="addRecipeApp">
-
-        <i class="fas fa-utensils toRecipes"></i>
 
         <header data-child-elements-open="false">
             <span class="rubrikLaggaTill">Hur vill du lägga till receptet?</span>
@@ -78,11 +77,17 @@
                 <li class="ingrediensItem">
                     <div class="inputLabelContainer ingrediensNamnContainer">
                         <label for="ingrediensNamnInput">Ingrediens</label>
-                        <input type="text" name="ingrediensNamnInput" class="ingrediensInput">
+                        <input type="text" name="ingrediensNamnInput" id="ingrediensNamnInput" class="ingrediensInput">
                     </div>
                     <div class="inputLabelContainer">
-                        <label for="ingrediensMangdInput">Mängd</label>
-                        <input type="text" name="ingrediensMangdInput" class="ingrediensInput">
+                        <label for="ingrediensAntalInput">Antal</label>
+                        <input type="text" name="ingrediensAntalInput" id="ingrediensAntalInput"
+                            class="ingrediensInput">
+                    </div>
+                    <div class="inputLabelContainer">
+                        <label for="ingrediensEnhetInput">Enhet</label>
+                        <input type="text" name="ingrediensEnhetInput" id="ingrediensEnhetInput"
+                            class="ingrediensInput">
                     </div>
                     <i class="fas fa-plus-circle"></i>
                 </li>
@@ -102,6 +107,26 @@
         </article>
 
     </section>
+
+    <footer>
+        <nav>
+            <ul class="menu">
+                <li class="randomizeWeek">
+                    <i class="fas fa-dice"></i>
+                    <span>Slumpa veckorecept</span>
+                </li>
+                <li class="randomizeDay">
+                    <i class="fas fa-dice-one"></i>
+                    <span>Slumpa dagens recept</span>
+                </li>
+                <li class="newRecipe">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Lägg till recept</span>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
     <script src="src/funktioner.js"></script>
     <script src="src/app.js"></script>
     <script src="src/addRecipe.js"></script>

@@ -29,7 +29,7 @@ window.onload = async () => {
 
     document.querySelector(".stegIndividuellContainer .fa-plus-circle").addEventListener("click", copyStegElement)
     document.querySelector(".ingrediensItem .fa-plus-circle").addEventListener("click", copyIngrediensElement)
-    document.querySelector(".toRecipes").addEventListener("click", switchApp)
+    document.querySelector(".newRecipe").addEventListener("click", switchApp)
 
 
 
@@ -39,14 +39,5 @@ window.onload = async () => {
 
     document.querySelector(".medUrlContainer").addEventListener("submit", sendUrl)
     document.querySelector(".sjalvContainer").addEventListener("submit", sendOwn)
-    // document.querySelector(".sjalvContainer").addEventListener("submit", talkingToServer)
 
-}
-
-function talkingToServer() {
-    // FIXME: gör så den funkar på båda knapparna
-    const button = document.querySelector("#addOwn")
-    button.setAttribute("disabled", true)
-    button.value = "Laddar..."
-    button.classList.add("loadingAnimation")
 }

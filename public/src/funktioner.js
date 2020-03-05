@@ -80,16 +80,6 @@ function skapaRecept(recept) {
     receptRubrik.textContent = rubrik
     receptRubrik.className = "rubrik"
 
-    const miniMeny = document.createElement("div")
-    miniMeny.className = "miniMeny"
-    const diceRubrik = createDice()
-    diceRubrik.addEventListener("click", randomSingleRecipe)
-    const nyttRecept = createAdd()
-    nyttRecept.addEventListener("click", switchApp)
-
-    miniMeny.append(diceRubrik, nyttRecept)
-    receptRubrik.append(miniMeny)
-
     // Om det inte är ett eget recept
     const credits = document.createElement("div")
     if (!egetRecept) {
@@ -107,7 +97,7 @@ function skapaRecept(recept) {
         receptRubrik.append(credits)
     }
 
-    headerContainer.append(receptRubrik, credits, miniMeny)
+    headerContainer.append(receptRubrik, credits)
 
     const bild = document.createElement("img")
     bild.src = bildlank
@@ -327,9 +317,11 @@ function switchApp() {
     if (status !== "block") {
         addRecipeApp.style.display = "block"
         mainApp.style.display = "none"
+        document.querySelector(".newRecipe span").textContent = "Se veckans recept"
     } else {
         addRecipeApp.style.display = "none"
         mainApp.style.display = "block"
+        document.querySelector(".newRecipe span").textContent = "Lägg till recept"
     }
 
 }
@@ -375,6 +367,8 @@ function moveLabel() {
 async function sendUrl(e) {
     e.preventDefault()
     console.log("funkar")
+    talkingToServer("#addUrl", true)
+
     const url = document.getElementById("urlInput").value
     const options = {
         method: "POST",
@@ -386,17 +380,21 @@ async function sendUrl(e) {
             "urlInput": url
         })
     }
-
-    const response = await fetch("/addUrl", options)
-    const message = await response.json()
-
-    console.log(message)
+    try {
+        const response = await fetch("/addUrl", options)
+        const message = await response.json()
+        console.log(message)
+        talkingToServer("#addUrl", false)
+    } catch (error) {
+        // console.log(error)
+        connectionError("#addUrl", error)
+    }
 }
 
 async function sendOwn(e) {
     e.preventDefault()
     console.log("funkar")
-    talkingToServer()
+    talkingToServer("#addOwn", true)
 
     const recipe = getOwnRecipe()
     console.log(recipe)
@@ -413,16 +411,30 @@ async function sendOwn(e) {
         })
     }
 
-    const response = await fetch("/addOwn", options)
-    const message = await response.json()
+    try {
+        const response = await fetch("/addOwn", options)
+        const message = await response.json()
+        console.log(message)
+        talkingToServer("#addOwn", false)
 
-    // // FIXME: snabbtest
-    const button = document.querySelector("#addOwn")
-    button.setAttribute("disabled", true)
-    button.value = "Färdigt!"
+    } catch (error) {
+        // console.log(error)
+        connectionError("#addOwn", error)
+    }
+
+
+}
+
+function connectionError(buttonId, error) {
+    const errorName = error.name
+    const button = document.querySelector(buttonId)
+
     button.classList.remove("loadingAnimation")
-
-    console.log(message)
+    button.classList.add("connectionError")
+    button.value = `ERROR - ${errorName}`
+    button.addEventListener("animationend", (e) => {
+        //TODO: skapa reservplan - ex spara lokalt tills server funkar/svarar
+    })
 }
 
 function getOwnRecipe() {
@@ -439,8 +451,8 @@ function getOwnRecipe() {
         const delar = ingrediensElement.children
         const total = {}
         total.ingrediens = delar[0].children[1].value
-        total.antal = "kommer sen" //FIXME:
-        total.enhet = "kommer sen" //FIXME:
+        total.antal = delar[1].children[1].value
+        total.enhet = delar[2].children[1].value
         recipe.ingredienser.push(total)
     }
 
@@ -450,4 +462,20 @@ function getOwnRecipe() {
     }
 
     return recipe
+}
+
+function talkingToServer(buttonId, currentlyTalking) {
+    // FIXME: gör så den funkar på båda knapparna
+
+    const button = document.querySelector(buttonId)
+
+    if (currentlyTalking) {
+        button.setAttribute("disabled", true)
+        button.value = "Laddar..."
+        button.classList.add("loadingAnimation")
+    } else if (!currentlyTalking) {
+        button.value = "Färdigt!"
+        button.classList.remove("loadingAnimation")
+    }
+
 }

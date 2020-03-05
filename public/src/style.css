@@ -14,6 +14,7 @@
     --secondary-action-bg: #d8aeff;
     --main-action-color: #f4ecec;
     --secondary-action-color: #000;
+    --footer-height: 12vh;
 }
 
 /* FÖR DEV */
@@ -25,14 +26,62 @@
     display: none;
 }
 
+body {
+    margin-bottom: calc(var(--footer-height) + 10px);
+}
 
 h2 {
     margin: 20px 0;
 }
 
-.tillfalligSwitch {
-    position: absolute;
+footer {
+    position: fixed;
     bottom: 0;
+    background-color: var(--main-bg);
+    width: 100%;
+    height: var(--footer-height);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.menu li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+}
+
+.menu li::before,
+.menu li::after {
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    left: 0;
+    top: 0;
+}
+
+.menu li::before {
+    box-shadow: -1px -1px 4px #fff;
+}
+
+.menu li::after {
+    box-shadow: 1px 1px 4px #888;
+}
+
+.menu li i {
+    font-size: 2em;
+}
+
+.menu li span {
+    font-size: 0.7em;
+    font-weight: bold;
 }
 
 .weekNav {
@@ -71,18 +120,16 @@ h2 {
 
 .headerContainer {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
     margin: 3vh 0;
 }
 
 .rubrik {
-    grid-column: 1/3;
     text-transform: uppercase;
 }
 
-.miniMeny {
-    grid-column: 2/2;
+/* .miniMeny {
     grid-row: 2/2;
     text-align: right;
 }
@@ -94,7 +141,7 @@ h2 {
 
 .miniMeny i:hover {
     cursor: pointer;
-}
+} */
 
 .credits {
     grid-column: 1/2;
@@ -103,7 +150,6 @@ h2 {
 
 .preview {
     position: relative;
-    /* min-height: 100px; */
     width: 80%;
     display: block;
     opacity: 0.3;
@@ -369,16 +415,21 @@ header[data-child-elements-open=true] .buttonsLaggaTill input {
     grid-template-columns: repeat(2, 1fr);
 }
 
-
-
 .ingredienserContainer {
     list-style: none;
 }
 
 .ingrediensItem {
     display: grid;
-    grid-template-columns: 65% 25% 10%;
+    grid-template-columns: 60% 15% 15% 10%;
     align-items: center;
+}
+
+.ingrediensItem input,
+.ingrediensItem label {
+    /* TODO: Ev mediaquery där detta tas bort om ej mobil */
+    padding-left: 5px;
+    font-size: 0.9em;
 }
 
 .ingrediensItem i {
@@ -444,8 +495,13 @@ input[type=submit] {
 }
 
 .loadingAnimation {
-    animation: pulsing 1s linear infinite;
+    animation: pulsing 1s ease-in-out infinite;
+}
 
+#addUrl.connectionError,
+#addOwn.connectionError {
+    background: #ff6565;
+    animation: shake 1s ease-in-out;
 }
 
 @keyframes pulsing {
@@ -463,6 +519,32 @@ input[type=submit] {
 
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    5% {
+        transform: translateX(-4px);
+    }
+
+    10% {
+        transform: translateX(4px);
+    }
+
+    15% {
+        transform: translateX(-4px);
+    }
+
+    20% {
+        transform: translateX(4px);
+    }
+
+    25% {
+        transform: translateX(0);
     }
 
 }
