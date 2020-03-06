@@ -312,11 +312,17 @@ function switchApp() {
     const addRecipeApp = document.querySelector(".addRecipeApp")
     const mainApp = document.querySelector(".mainApp")
 
+    // FIXME: Tillfällig lösning för dev
+    const weekOverview = document.querySelector(".weekOverview")
+
+    weekOverview.style.display = "none"
+
     const status = document.querySelector(".addRecipeApp").style.display
 
     if (status !== "block") {
         addRecipeApp.style.display = "block"
         mainApp.style.display = "none"
+
         document.querySelector(".newRecipe span").textContent = "Se veckans recept"
     } else {
         addRecipeApp.style.display = "none"
@@ -476,6 +482,18 @@ function talkingToServer(buttonId, currentlyTalking) {
     } else if (!currentlyTalking) {
         button.value = "Färdigt!"
         button.classList.remove("loadingAnimation")
+    }
+}
+
+function fillWeekOverview(weekMenu) {
+    // FIXME: Behöver troligen ändras när det blir veckomeny ist för alla recept som vid dev
+
+
+    const dagar = document.querySelectorAll(".dayRecipe")
+    let index = 0
+    for (const dag of dagar) {
+        dag.textContent = middagsRecepten[index].rubrik
+        index++
     }
 
 }

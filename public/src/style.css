@@ -22,9 +22,15 @@
     /* display: none; */
 }
 
+.weekOverview {
+    display: none;
+}
+
 .addRecipeApp {
     display: none;
 }
+
+/* BASICS */
 
 body {
     margin-bottom: calc(var(--footer-height) + 10px);
@@ -48,6 +54,8 @@ footer {
     width: 100%;
     height: var(--footer-height);
 }
+
+/* MAIN APP */
 
 .menu {
     list-style: none;
@@ -292,29 +300,63 @@ footer {
     font-size: 0.9em;
 }
 
+/* WEEK OVERVIEW */
 
-/* "LÄGGA TILL RECEPT"-DEL */
+.weekOverview {
 
-.fa-plus-circle:hover {
+    margin: 10vh auto;
+    width: 90vw;
+}
+
+.weekOverview .day {
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+}
+
+.weekOverview .day.active {
+    font-size: 1.1em;
+}
+
+.weekOverview .day .dayRecipe {
+    font-style: italic;
+}
+
+.weekOverview .day i.fas.fa-redo {
+    position: relative;
+    display: none;
+    pointer-events: none;
+}
+
+.weekOverview .day i.fas.fa-redo::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.weekOverview .day.active i.fas.fa-redo {
+    display: block;
+    pointer-events: all;
+    opacity: 0.6;
+}
+
+.weekOverview .day.active i.fas.fa-redo:hover {
     cursor: pointer;
 }
 
-.toRecipes {
-    --button-size: 60px;
-    font-size: calc(var(--button-size) / 1.5);
-    background: var(--main-bg);
-    padding: 10px;
-    height: var(--button-size);
-    width: var(--button-size);
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
+.weekOverview .day.active.loading i.fas.fa-redo {
+    animation: spinning 1000ms linear infinite;
 }
 
-.toRecipes:hover {
+@keyframes spinning {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* ADD RECIPE APP */
+
+.fa-plus-circle:hover {
     cursor: pointer;
 }
 
