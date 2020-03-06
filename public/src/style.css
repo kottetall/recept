@@ -30,6 +30,13 @@ body {
     margin-bottom: calc(var(--footer-height) + 10px);
 }
 
+button:active,
+input[type=button]:active,
+input[type=submit]:active {
+    transform: scale(0.95);
+    background: rgba(255, 231, 231, 0.48);
+}
+
 h2 {
     margin: 20px 0;
 }
@@ -57,12 +64,22 @@ footer {
     padding: 5px;
 }
 
+.menu li:active {
+    transform: scale(0.95);
+    background: rgba(255, 231, 231, 0.48);
+}
+
+
+.menu li:hover {
+    cursor: pointer;
+}
+
 .menu li::before,
 .menu li::after {
     content: "";
     position: absolute;
-    width: 105%;
-    height: 105%;
+    width: 100%;
+    height: 100%;
     left: 0;
     top: 0;
 }
@@ -113,7 +130,7 @@ footer {
     transition: font-size var(--transition-length), opacity var(--transition-length), font-weight var(--transition-length), border-bottom var(--transition-length), transform var(--transition-length);
 }
 
-.week {
+.weekdayContainer {
     margin: 0 auto;
     width: 90vw;
 }
@@ -129,20 +146,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* .miniMeny {
-    grid-row: 2/2;
-    text-align: right;
-}
-
-.miniMeny i {
-    margin: 0 6px;
-    opacity: 0.6;
-}
-
-.miniMeny i:hover {
-    cursor: pointer;
-} */
-
 .credits {
     grid-column: 1/2;
     grid-row: 2/2;
@@ -152,7 +155,7 @@ footer {
     position: relative;
     width: 80%;
     display: block;
-    opacity: 0.3;
+    opacity: 0.5;
     margin: 0 auto;
 }
 

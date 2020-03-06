@@ -25,7 +25,7 @@
                 <li class="day" id="sunday" data-index="6">Sön</li>
             </ul>
         </nav>
-        <article class="week">
+        <article class="weekdayContainer">
             <div class="weekday">
 
                 <div class="weekday">
@@ -37,6 +37,13 @@
         </article>
 
     </section>
+
+    <section class="weekOverview">
+        <ul class="week">
+
+        </ul>
+    </section>
+
 
     <section class="addRecipeApp">
 
@@ -111,15 +118,15 @@
     <footer>
         <nav>
             <ul class="menu">
-                <li class="randomizeWeek">
-                    <i class="fas fa-dice"></i>
-                    <span>Slumpa veckorecept</span>
+                <li class="randomizeWeek" role="button">
+                    <i class="fas fa-calendar-week"></i>
+                    <span>Veckoöversikt</span>
                 </li>
-                <li class="randomizeDay">
-                    <i class="fas fa-dice-one"></i>
+                <li class="randomizeDay" role="button">
+                    <i class="fas fa-dice"></i>
                     <span>Slumpa dagens recept</span>
                 </li>
-                <li class="newRecipe">
+                <li class="newRecipe" role="button">
                     <i class="fas fa-plus-circle"></i>
                     <span>Lägg till recept</span>
                 </li>
